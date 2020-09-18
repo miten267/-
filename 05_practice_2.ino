@@ -7,7 +7,7 @@ void setup() {
   while(!Serial) {
     ; // wait for serial port to connect.
   }
-  toggle = 1;
+  toggle = 0;
   count = 0;
   digitalWrite(PIN_LED, toggle); // turn off LED.
   delay(1000);
@@ -18,7 +18,7 @@ void loop() {
   digitalWrite(PIN_LED, toggle); //update LED status.
   delay(100); //wait for 1,000 milliseconds
   if(count == 10){
-    digitalWrite(PIN_LED, 0);
+    digitalWrite(PIN_LED, 1);
     while(1){}
   }
 }
